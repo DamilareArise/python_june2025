@@ -121,12 +121,24 @@ setA = {5,4,1,2,6,8,7,3}
 setB = {'temi', 'dami', 'joy', 'femi', 'bolu', 'emmanuel'}
 # print(setB)
 
-student1 = {
-    'name': 'kenny',
-    'course': 'Data analysis',
-    'state': 'Lagos State',
-    'subjects': ['excel', 'python', 'powerbi']
+students = [ 'Ade', 'Femi', 'lola' ]
+# print(students[-1])
+
+person = {
+    "fullname": 'Adebayo Femi',
+    "age": 25,
+    "city": 'Lagos',
 }
+
+# print(person['fullname'])
+
+
+# student1 = {
+#     'name': 'kenny',
+#     'course': 'Data analysis',
+#     'state': 'Lagos State',
+#     'subjects': ['excel', 'python', 'powerbi']
+# }
 # print(type(student))
 
 students = [
@@ -145,6 +157,7 @@ students = [
         'course': 'Data analysis'
     }
 ]
+# print(students[0]['name'])
 
 # print(students[0]['course'])
 # print(students[1]['course'])
@@ -159,21 +172,165 @@ students = [
 #  % -> Modulus, // -> Floor division, ** -> Raise to power
 # 2. Assignment Operator: =, +=, -=, *=, /=, %=, //=, **=
 # 3. comaparison operator: ==,!=, >, <, >=, <=
+# 4. Logical Operator: and, or, not
 
-val1 = 0
-val2 = 2
-# print(val1 ** val2)
-# val1 -= 10 # val1 = val1 + 10
-# print(val1)
+# val1 = 5
+# val2 = 2
 
-# print(val1 != val2)
+# val2 *= 2
+# print(val1 % val2)
+# print(val1 == val2)
+
+
 
 # conditional statements
-if val1 == 5:
-    print('yes')
+# if val1 == 5:  
+#     print("I'm val1")
+
+# else:
+#     print("I'm not val1")
+
+# old or even number checker
+# value = int(input('Input your number: '))
+
+# if value % 2 > 0:
+#     print('Odd number')
+# else:
+#     print('Even Number')
+    
+# print(type(value))
+
+# AND 
+# A ____ B ____ Result
+# T ____ T ____ T
+# T ____ F ____ F
+# F ____ T ____ F
+# F ____ F ____ F
+
+# OR
+# A ____ B ____ Result
+# T ____ T ____ T
+# T ____ F ____ T
+# F ____ T ____ T
+# F ____ F ____ F
+
+rice = True
+beans = False
+# print(rice and beans)
+
+# if rice and beans:
+#     print('Buy both rice and beans')
+# elif rice:
+#     print('Buy rice')
+# elif beans:
+#     print('Buy beans')
+# else:
+#     print("come back home")
+
+# if rice or beans:
+#     print('Buy rice or beans') 
+# else:
+#     print('come back home')
+
+# value = int(input('Input your number: '))
+
+# if value % 3 == 0 and value % 5 == 0:
+#     print("FizzBuzz")
+# elif value % 3 == 0:
+#     print("Fizz")
+# elif value % 5 == 0:
+#     print("Buzz")
+# else:
+#     print(f"{value} is not a fizzbuzz")
+
+
+# calculator 
+
+# print("Alata calculator")
+# val1 = float(input('Value 1: '))
+# operator = input('choose operator ( *, /, +, - ): ')
+# val2 = float(input('Value 2: '))
+
+# if operator == '+':
+#     print(val1 + val2)
+# elif operator == '-':
+#     print(val1 - val2)
+# elif operator == '*':
+#     print(val1 * val2)
+# elif operator == '/':
+#     print(val1 / val2)
+    
+# else:
+#     print("Invalid operator")
+    
+# print('I dey ooo')
+
+
+# nested if statement...
+# rice = True
+# beans = True
+# bread = True
+# chicken = True
+
+# if rice and beans:
+#     print('buy rice and beans')
+# elif beans:
+#     print('There is beans')
+#     if bread:
+#         print('buy beans and bread')
+#     else:
+#         print('I know you have beans but I need it with bread')
+        
+# elif rice:
+#     print('There is rice')
+#     if chicken:
+#         print('buy rice and chicken')
+#     else:
+#         print('I can not eat rice without chicken')
+    
+# else:
+#     print('Come back home')
+
+
+# Ussd App
+
+print('Print Welcome to MyMTN')
+code = input('ussd code: ')
+if code == '*312#':
+    print("""
+    1. Buy Data
+    2. Check Balance
+    #. Exit
+    """)
+    choice = input('Choice: ')
+    if choice == "1":
+        print('You have successfully bought data')
+        
+    elif choice == "2":
+        print('You have successfully checked your balance')
+    elif choice == "#":
+        print('Goodbye')
+        exit()
+    else:
+        print('Invalid choice')
+    
 else:
-    print('no')
+    print('Invalid code')
+
+    
+
+
+
+
+
 
 # Assignments
 # Study python operators and conditional statements
 # Build a simple calculator
+# Design a grading system.
+# Design a fizzbuzz app.
+    # if the in divisible by 3 -> fizz
+    # if the number is divisible by 5 -> buzz
+    # if the number is divisible by both 3 and 5 -> fizzbuzz
+# A simple ussd application 
+
