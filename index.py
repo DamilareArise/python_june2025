@@ -173,6 +173,20 @@ students = [
 # 2. Assignment Operator: =, +=, -=, *=, /=, %=, //=, **=
 # 3. comaparison operator: ==,!=, >, <, >=, <=
 # 4. Logical Operator: and, or, not
+# 5. Membership Operator: in, not in
+# 6. Identity Operator: is, is not
+
+
+fruits = ['mango', 'cashew', 'orange']
+# print('Mango' in fruits)
+# print('Mango' not in fruits)
+
+
+numA = 5
+numB = 5
+
+# print(numA is not numB)
+
 
 # val1 = 5
 # val2 = 2
@@ -294,33 +308,30 @@ beans = False
 
 # Ussd App
 
-print('Print Welcome to MyMTN')
-code = input('ussd code: ')
-if code == '*312#':
-    print("""
-    1. Buy Data
-    2. Check Balance
-    #. Exit
-    """)
-    choice = input('Choice: ')
-    if choice == "1":
-        print('You have successfully bought data')
+# print('Print Welcome to MyMTN')
+# code = input('ussd code: ')
+# if code == '*312#':
+#     print("""
+#     1. Buy Data
+#     2. Check Balance
+#     #. Exit
+#     """)
+#     choice = input('Choice: ')
+#     if choice == "1":
+#         print('You have successfully bought data')
         
-    elif choice == "2":
-        print('You have successfully checked your balance')
-    elif choice == "#":
-        print('Goodbye')
-        exit()
-    else:
-        print('Invalid choice')
+#     elif choice == "2":
+#         print('You have successfully checked your balance')
+#     elif choice == "#":
+#         print('Goodbye')
+#         exit()
+#     else:
+#         print('Invalid choice')
     
-else:
-    print('Invalid code')
+# else:
+#     print('Invalid code')
 
     
-
-
-
 
 
 
@@ -334,3 +345,66 @@ else:
     # if the number is divisible by both 3 and 5 -> fizzbuzz
 # A simple ussd application 
 
+
+
+# Python strings
+# name = 'Boluwatife' # ['k', 'e', 'n', 'n', 'y', '', '']
+# print(name[-1])
+# fruits = ['Mango', 'Apple', 'Cashew'] # [ ['M', 'a', 'n', 'g', 'o'],  ['A', 'p', 'p', 'l', 'e']]
+# print(fruits[0][0])
+
+# cars = [['toyota', ['Ford']], ['Benz', ['Honda', 'Nissan']]]
+
+# print(cars[1][1][3])
+# print(cars[1][1][0])
+
+# slicing
+# print(name[0:3])
+
+# print(fruits[:2])
+# print(fruits[1:])
+# print(fruits[-2: ])
+
+# students = ['ayo', 'ade', 'lola', 'kemi', 'shola', 'bunmi']
+# students
+
+# print(len(students))
+# print(students[2:4])
+
+expression = 'Hello everyone, I am glad to be part of this family'
+# print(len(expression))
+# print(type(expression))
+# print(expression.upper())
+# print(expression.lower())
+# print(len(expression.strip()))
+
+
+# new_exp = expression.strip('&?/$')
+# print(new_exp)
+
+# print(expression.find('everyone'))
+# print(expression.split())
+
+
+
+# name = input('Your name: ')
+# # print(name)
+# ans = input('Are you a student? yes or no: ')
+# if ans.lower() == 'yes': 
+#     print(f'{name} is a student')
+# else:
+#     print(f'{name} is not a student')
+
+
+# word counter
+# text = input('Enter a text: ')
+# print(len(text.strip().split()))
+
+
+# 1. len 
+# 2. strip
+# 3. split
+
+
+# Assigment
+# 1. build a CBT application. a simple question and answer flow and after the test, display the result.
