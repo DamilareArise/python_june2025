@@ -408,3 +408,130 @@ expression = 'Hello everyone, I am glad to be part of this family'
 
 # Assigment
 # 1. build a CBT application. a simple question and answer flow and after the test, display the result.
+
+
+# Escape characters
+# \n,  -> next line
+# \r, -> return
+# \t -> tab
+# r -> raw string
+
+# print("C:\\django_works\\june_django")
+# print('It\'s mine')
+# print(r"C:\django_works\june_django")
+
+
+# PYTHON Collections / Array 
+# 1. list
+# 2. tuple
+# 3. set 
+# 4. dictionary
+
+# list [] or list() -> ordered, allows duplicate values, It can indexed, it's changeable/mutable
+
+myList = ["Apple", 'Mango', 'Tomato', 'Orange', 'Tomato']
+numbers = [2, 4, 7, 5, 4, 1, 3, 6]
+# print(myList[3])
+# myList[3] = ""
+
+# myList.reverse()
+# myList.append("Cherry")
+# myList.extend(("Cherry", 'Watermelon'))
+# myList.pop(5)
+# myList.remove('Mango')
+# myList.sort()
+# numbers.sort(reverse=False)
+# print(myList.index('Tomato', 3, 4))
+# print(numbers)
+# print(myList)
+
+# robust = myList + ("Cherry", 'Watermelon')
+# print(robust)
+
+# filter out item that ends with 'o' and pop them or put in a seperate list
+
+item_with_o = []
+item_without_o = []
+
+for item in myList:
+    result = item.endswith('o')
+    if result:
+        item_with_o.append(item)
+    else:
+        item_without_o.append(item)
+        
+print(item_with_o)
+print(item_without_o)
+        
+
+
+
+
+# Python loops => for loop and while loop
+
+# print(f"{myList[0]} is a fruit")
+# print(f"{myList[1]} is a fruit")
+# print(f"{myList[2]} is a fruit")
+# print(f"{myList[3]} is a fruit")
+# print(f"{myList[4]} is a fruit")
+
+# x=1
+# for fruit in myList:
+#     print(f"{x}. {fruit} is a fruit")
+    
+#     if x == 3:
+#         break
+    
+#     x+=1
+
+# x=1
+# for fruit in myList:
+#     print(f"{x}. {fruit} is a fruit")
+
+#     if x == 3:
+#         break
+    
+#     x+=1
+    
+#     # else:
+#     #     x+=1
+#     #     continue
+    
+
+# name = "Damilare"
+# print('my name is ' + str(name))
+# print(f'my name is {name}')
+
+# class-work 
+#1. sort items into a list of fruits and vegies
+
+# items = [
+#     "apple-fruit",
+#     "carrot-veg",
+#     "banana-fruit",
+#     "spinach-veg",
+#     "grape-fruit",
+#     "broccoli-veg",
+#     "mango-fruit",
+#     "lettuce-veg",
+#     "orange-fruit",
+#     "cucumber-veg",
+#     "pineapple-fruit",
+#     "pepper-veg",
+#     "watermelon-fruit",
+#     "tomato-veg",
+#     "strawberry-fruit",
+#     "onion-veg",
+#     "blueberry-fruit",
+#     "cabbage-veg",
+#     "papaya-fruit",
+#     "zucchini-veg"
+# ]
+
+
+# Assignment.
+# Upgrade your cbt app to do the following;
+# 1. ask a user how many students are about to take the test/quiz.
+# 2. collect the name of each student into a list.
+# 3. call each student one after the other to take their test.
+# 4. print out all the students name and their score respectively
