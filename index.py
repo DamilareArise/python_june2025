@@ -651,3 +651,172 @@ item_price = [
 
 # for *x, in item_price:
 #     print(x[2])
+
+# DICTIONARY
+# SET
+# WHILE LOOP
+# JSON
+# PYTHON FUNCTIONS
+# OOP & MODULARIZATION
+# SQL 1
+# ERROR HANDLING
+# FILE HANDLING
+# DATETIME
+# REGULAR EXPRESSION
+
+
+# DICTIONARY => 
+user = {
+    "Name": "Ayo Ola",
+    "Gender": "Male",
+    "Age": 23,
+    "isStaff": True,
+}
+# print(type(user))
+# print(user['Name'])
+
+# user['Age'] = 30
+# user['Address'] = {
+#     "city": "Osogbo",
+#     "state": "Osun state"
+# }
+
+
+# user.update({"age": 40})
+# print(user.get('age', 'Not found'))
+# user.pop('isStaff')
+# user.popitem()
+
+
+# print(user.keys())
+# print(user.values())
+# print(user.items())
+
+# print(user)
+# print(user['Address']['city'])
+# print('I am still here')
+
+ques_ans = {
+    "a":"what is capital of Lagos a. Ikeja, b. Ajegunle",
+    "b": "What is the capital of Kano a. Kaduna b. Kano"
+}
+
+# [
+#     ("a", "what is capital of Lagos a. Ikeja, b. Ajegunle")
+# ]
+
+# for ans, quest in ques_ans.items():
+#     print(quest)
+
+
+# WHILE LOOP
+# x = 10
+# while x > 0:
+#     print('Yo', x)
+#     x -= 1
+    
+ticket = 10
+# while ticket > 0: 
+#     age = int(input('Age: '))
+#     if age > 18:
+#         ticket -= 1
+#         print('Ticket issued remaining', ticket)
+#         if ticket == 3:
+#             break    
+#     else:
+#         print('Too young for the show')
+
+# while ticket > 0:
+#     age = int(input('Age: '))
+#     if age < 18:
+#         print('Too young for the show')
+#         continue
+    
+#     ticket -=1
+#     print('Ticket issued remaining', ticket)
+#     if ticket == 3:
+#         break
+
+# while True:
+#     print('Hellooo')
+#     user = input('Press enter to continue and 1 to stop: ')
+#     if user == '1':
+#         break
+
+
+# code = input('Input ussd: ').strip()
+# while code != '*312#':
+#     print('Invalid code. Try again!')
+#     code = input('Input ussd: ').strip()
+    
+# print('Welcome')
+
+
+
+# Create a contact list app (CRUD -> create, read, update, delete)
+contact_list = []
+while True:
+    print('''
+    1. Add Contact
+    2. View Contact
+    3. Edit Contact
+    4. Delete Contact
+    #. Exit
+    ''')
+    option = input('Option: ').strip()
+    if option == '#':
+        break
+    elif option == '1':
+        contact = {
+            "name": input('Fullname: '),
+            "email": input('Email: '),
+            "phone": input('Phone: ')
+        }
+        contact_list.append(contact)
+        print('Contact added successfully')
+    
+    elif option == '2':
+        print(contact_list)
+        for i, contact in enumerate(contact_list, 1):
+           print(f"{i}. {contact.get('name')} ")
+        
+    elif option == '4':
+        for i, contact in enumerate(contact_list, 1):
+           print(f"{i}. {contact.get('name')} ")
+           
+        delete = int(input('Delete the contact at number: '))
+        index = delete - 1
+        contact_list.pop(index)
+        print('Contact deleted successfully')
+        
+    elif option == '3':
+        for i, contact in enumerate(contact_list, 1):
+            print(f"{i}. {contact.get('name')} ")
+            
+        edit = int(input('Edit the contact at number: '))
+        index = edit - 1
+        contact = contact_list[index]
+        
+        print('Press enter to retain previous value')
+        name = input(f'Fullname ({contact['name']}): ').strip()
+        email = input(f'Email ({contact['email']}): ').strip()
+        phone = input(f'Phone ({contact['phone']}): ').strip()
+        
+        edited_contact = {
+            "name": contact['name'] if name == '' else name,
+            "email": contact['email'] if email == '' else email,
+            "phone": contact['phone'] if phone == '' else phone
+        }
+        contact_list[index] = edited_contact
+        
+        print('Contact edited successfully')
+           
+
+
+# li = ['Ayo', 'Baba', 'lola']
+# for i, value in enumerate(li, 1):
+#     print(i, value)
+
+# Assigment
+# 1. Create Todo app.
+# 2. Create a simple bot
