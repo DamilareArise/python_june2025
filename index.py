@@ -460,8 +460,8 @@ for item in myList:
     else:
         item_without_o.append(item)
         
-print(item_with_o)
-print(item_without_o)
+# print(item_with_o)
+# print(item_without_o)
         
 
 
@@ -535,3 +535,119 @@ print(item_without_o)
 # 2. collect the name of each student into a list.
 # 3. call each student one after the other to take their test.
 # 4. print out all the students name and their score respectively
+
+
+# items = ['Bag', 'Shoe']
+# prices = [2000, 30000]
+
+# for item, price in zip(items, prices):
+#     print(f"{item} - #{price}")
+
+# print(sum(prices))
+# print(min(prices))
+# print(max(prices))
+# print(sum(prices)/len(prices))
+
+# print("Welcome to ourQuiz App")
+
+# no_students = int(input("How many students are taking the test: "))
+
+# students = []
+# scores = []
+# print("Kindly register each student")
+# for x in range(no_students):
+#     student = input(f"Student name {x+1}: ").strip()
+#     students.append(student)
+
+# # print(students)
+
+# for student in students:
+#     print(f"\n{student} it's for your test")
+    
+#     questions = [
+#         "1. What is the capital of Ghana a.) Togo  b.) Accra c.) Lagos",
+#         "2. What is the capital of Nigeria a.) Accra b.) Lagos c.) Abuja"
+#     ]
+#     answers = [
+#         'b',
+#         'c'
+#     ]
+#     score = 0
+#     for ques, ans in zip(questions, answers):
+#         print(ques)
+        
+#         user = input('Answer: ').strip().lower()
+#         if user == ans:
+#             score += 5
+            
+#     scores.append(score)
+    
+# # print(students)
+# # print(scores)
+
+# print(f"""
+# ==============================    
+#         FINAL RESULT
+ 
+# """)
+# for student, score in zip(students, scores):
+#     print(f"{student} --- {score}")
+    
+# # Student with the highest score
+# ind = scores.index(max(scores))  
+# print(f"{students[ind]} got the highiest score")
+
+# ind = scores.index(min(scores))  
+# print(f"{students[ind]} got the lowest score")
+
+# print("\n==============================")
+
+
+
+
+# TUPLE -> ordered, allows duplicate, immutable/unchangeable, indexed
+myTP = ('ope', 'ola', 'femi', 'oyin', 'femi')
+
+# A = ("Ope")
+# B = ("ope",)
+# print(type(B))
+
+# print(myTP[0:3])
+
+# myTP[0] = "Damilare"
+
+
+# x = list(myTP)
+# # print(x)
+# x[0] = "Damilare"
+# myTp = tuple(x)
+# print(myTp)
+
+# unpacking
+# v, w, x, y, z= myTP
+# *x,= myTP
+
+# z, *y, x= myTP
+# print(z)
+
+# print(myTP.count('femi'))
+# print(myTP.index("femi", 3))
+
+
+items = ['Bag', 'Shoe']
+prices = [2000, 30000]
+# print(list(zip(items, prices)))
+
+# for item in zip(items, prices):
+#     print(item)
+
+
+item_price = [
+    ('Bag', 2000, 'Gucci'),
+    ('Shoe', 3000, 'LV')
+]
+
+
+
+# for *x, in item_price:
+#     print(x[2])
