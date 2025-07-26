@@ -663,6 +663,8 @@ item_price = [
 # FILE HANDLING
 # DATETIME
 # REGULAR EXPRESSION
+# GIT
+# Ipython
 
 
 # DICTIONARY => 
