@@ -18,15 +18,21 @@ catagories of queries
 """
 import mysql.connector as sql 
 
-mycon = sql.connect(
-    host = "127.0.0.1",
-    port = "3306",
-    user = "root",
-    password = "password",
-    database = "junebank_db"
-)
-mycon.autocommit = True
-mycursor = mycon.cursor()
+try:
+    mycon = sql.connect(
+        host = "127.0.0.1",
+        port = "3306",
+        user = "root",
+        password = "password",
+        database = "junebank_db"
+    )
+   
+except Exception as e:
+    print(f"Error connecting to database: {e}")
+    
+else:
+    mycon.autocommit = True
+    mycursor = mycon.cursor()
 
 # bank app
 # -> functionalities; create account, transfer, deposit, withdraw, check balance, login e.t.c
@@ -70,17 +76,81 @@ import random
 # num = random.randint(1000000000, 1099999999)
 # print(num)
 
-def register():
-    fullname = input("Enter your fullname: ")
-    email = input("Enter your email: ")
-    password = input("Enter your password: ")
-    address = input("Enter your address: ")
-    account_no = random.randint(1000000000, 1099999999)
+# def register():
+#     fullname = input("Enter your fullname: ")
+#     email = input("Enter your email: ")
+#     password = input("Enter your password: ")
+#     address = input("Enter your address: ")
+#     account_no = random.randint(1000000000, 1099999999)
     
-    query = "INSERT INTO users(fullname, email, password, address, account_no) VALUES(%s, %s, %s, %s, %s)"
-    values = (fullname, email, password, address, account_no)
-    mycursor.execute(query, values)
+#     query = "INSERT INTO users(fullname, email, password, address, account_no) VALUES(%s, %s, %s, %s, %s)"
+#     values = (fullname, email, password, address, account_no)
+#     mycursor.execute(query, values)
     
-    print('Registration successfull')
+#     print('Registration successfull')
 
-register()
+# register()
+
+# def change_password():
+#     email = input("Enter your email: ")
+#     old_pw = input('Enter old password: ')
+#     new_pw = input('Enter new password: ')
+#     query = 'UPDATE users SET password = %s WHERE email = %s and password = %s'
+#     values = (new_pw, email, old_pw)
+#     mycursor.execute(query, values)
+#     print('Password changed')
+    
+# change_password()
+
+# def delete_user():
+#     email = input("Enter your email: ")
+#     query = "DELETE FROM users WHERE email = %s"
+#     values = (email,)
+#     mycursor.execute(query, values)
+#     print('User deleted')
+
+# delete_user()
+
+
+
+# query = "SELECT * FROM users"
+# query = "SELECT fullname, account_no, account_balance FROM users WHERE id=1"
+# mycursor.execute(query)
+# details = mycursor.fetchone()
+# print(details[0],  details[1])
+
+
+# query = "SELECT * FROM users WHERE id=1"
+# mycursor.execute(query)
+# details = mycursor.fetchone()
+# print(details[3])
+
+
+# [
+#     (1, 'Dami'),
+#     (2, 'kenny')
+# ]
+
+
+# def signin():
+#     email = input("Enter your email: ")
+#     password = input('Enter your password: ')
+    
+#     query = "SELECT * FROM from WHERE email = %s and password = %s"
+#     values = (email, password)
+#     mycursor.execute(query, values)
+#     details = mycursor.fetchone()
+#     # print(details)
+    
+#     if details != None:
+#         print('login successfull')
+#     else:
+#         print('Invalid email or password')
+    
+# signin()
+
+# SELECT * FROM users WHERE fullname LIKE "%i%";
+# SELECT SUM(account_balance) as total FROM users;
+# SELECT MIN(account_balance) FROM users;
+
+# UPDATE users SET account_balance = 1000 WHERE id = 1
